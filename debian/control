@@ -1,5 +1,5 @@
 Source: libtrawldb
-Section: unknown
+Section: utils
 Priority: optional
 Maintainer: Soumya Ranjan Patnaik <soumyaranjan1812@gmail.com>
 Build-Depends: debhelper, libglib2.0-dev, meson 
@@ -7,6 +7,6 @@ Standards-Version: 4.5.0
 
 Package: libtrawldb
 Architecture: any
-Multi-Arch: foreign
+Multi-Arch: same
 Depends: ${misc:Depends}, ${shlibs:Depends}, trawld
 Description: C library to interact with trawl.
