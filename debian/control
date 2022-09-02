@@ -8,6 +8,5 @@ Standards-Version: 4.5.0
 Package: libtrawldb
 Architecture: any
 Multi-Arch: foreign
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}, trawld
 Description: C library to interact with trawl.
-
