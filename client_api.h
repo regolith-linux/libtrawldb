@@ -5,7 +5,6 @@
 
 typedef OrgRegolithTrawl1 *conf_client;
 
-conf_client *proxy_new();
 bool conf_client_init(conf_client *proxy, GError **err);
 
 bool conf_client_load(conf_client proxy, char *file, bool nocpp, GError **err);
