@@ -3,14 +3,11 @@
 #include <stdlib.h>
 
 bool conf_client_init(conf_client *proxy, GError **err) {
-  bool success = true;
+  /* err may be NULL (GLib convention): check the proxy, not the error */
   *proxy = org_regolith_trawl1_proxy_new_for_bus_sync(
       G_BUS_TYPE_SESSION, G_DBUS_PROXY_FLAGS_NONE, "org.regolith.Trawl",
       "/org/regolith/Trawl", NULL, err);
-  if (*err) {
-    success = false;
-  }
-  return success;
+  return *proxy != NULL;
 }
 
 bool conf_client_load(conf_client proxy, char *file, bool nocpp, GError **err) {

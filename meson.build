@@ -31,3 +31,4 @@ pkg.generate(libclient_api,
 run_target('uninstall-lib', command : ['scripts/uninstall.sh'])
 
 subdir('example')
+subdir('tests')
